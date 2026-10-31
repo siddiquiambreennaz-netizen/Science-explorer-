@@ -1,0 +1,19 @@
+{
+  "id": "/",
+  "name": "SCIENCE EXPLORER \u2014 Learn, Play, Discover",
+  "short_name": "Science Explorer",
+  "description": "AI-powered interactive learning for Classes 5\u201310, with saved offline learning packs.",
+  "start_url": "/app",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#071225",
+  "theme_color": "#10264b",
+  "icons": [
+    {
+      "src": "/icons/science-explorer.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
