@@ -1,0 +1,12 @@
+export const PHYSICS_MISSIONS = [
+  { id: "gravity", title: "Gravity drop", question: "In a vacuum, which lands first?", options: ["The heavy ball", "The light ball", "Both together"], correct: 2, explanation: "Without air resistance, gravity gives both objects the same acceleration. Mass does not change their falling time.", hint: "Imagine there is no air to slow either ball." },
+  { id: "ramp", title: "Ramp racers", question: "What happens on a steeper ramp?", options: ["The ball accelerates more", "Gravity disappears", "The ball always stops"], correct: 0, explanation: "On a steeper ramp, a larger part of gravity pulls the ball along the slope. This model ignores rolling resistance.", hint: "More of gravity’s pull acts along a steep slope." },
+  { id: "friction", title: "Friction trail", question: "Which surface lets a sliding object travel farther?", options: ["A rough surface", "A smooth surface", "Both always stop together"], correct: 1, explanation: "With the same starting speed, lower friction removes motion energy more slowly. The object travels farther.", hint: "Friction changes motion energy into thermal energy." },
+  { id: "circuit", title: "Light it up", question: "When can the bulb light?", options: ["When the switch is open", "With no battery", "When the circuit is closed"], correct: 2, explanation: "A closed conducting path connects both battery terminals through the bulb, allowing current to flow.", hint: "Current needs a complete path." },
+  { id: "light", title: "Mirror mission", question: "A ray hits at 30° to the normal. Its reflection angle is…", options: ["60°", "30°", "90°"], correct: 1, explanation: "The angle of reflection equals the angle of incidence. Both are measured from the normal: a line perpendicular to the mirror.", hint: "The two angles on either side of the normal match." },
+  { id: "energy", title: "Energy journey", question: "As a ball falls, gravitational potential energy becomes…", options: ["Kinetic energy", "New mass", "Nothing"], correct: 0, explanation: "As height decreases, gravitational potential energy turns into kinetic energy (motion). This ideal model ignores air resistance.", hint: "Kinetic means movement." },
+] as const;
+export function physicsAnswerCorrect(mission: number, answer: number) {
+  return PHYSICS_MISSIONS[mission]?.correct === answer;
+}
+export const physicsProgressSlug = (id: string) => `physics-playlab-${id}`;

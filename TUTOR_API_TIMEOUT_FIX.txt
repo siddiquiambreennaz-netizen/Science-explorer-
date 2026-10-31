@@ -1,0 +1,19 @@
+SCIENCE EXPLORER — AI TUTOR API timeout fix
+
+Changed:
+- Gemini Tutor request deadline increased from 6 seconds to 30 seconds.
+- Each Gemini model attempt can run for up to 14 seconds, leaving time for fallback.
+- Transient HTTP 408 responses now also trigger the next configured Gemini model.
+- Lovable AI gateway Tutor requests have a 30-second timeout.
+- Interrupted gateway streams now return a readable retry message.
+- Updated Gemini setup and repair notes.
+
+Not changed:
+- No API keys or secrets were added.
+- No quota, billing, or account settings were changed.
+- ElevenLabs settings and unrelated app features were left untouched.
+
+Important:
+- The archive does not include a real .env file or private API key.
+- Live AI response cannot be tested without the user's configured server-side API key and runtime.
+- After replacing the project files, restart the app/server so the server-side code reloads.

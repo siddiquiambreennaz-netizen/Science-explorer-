@@ -1,0 +1,20 @@
+SCIENCE EXPLORER — React startup recovery
+
+This update pins React and React DOM to 19.2.8 (the versions recorded in the
+project's Bun lockfile) and explicitly asks Vite to deduplicate React modules.
+
+After extracting, open the science_explorer_custom folder in VS Code. In its
+PowerShell terminal run these commands one at a time:
+
+  npm install
+  Remove-Item -Recurse -Force .\node_modules\.vite -ErrorAction SilentlyContinue
+  npm run dev
+
+If the browser still shows a hydration mismatch mentioning data-rc-order or
+chrome-extension://, test once in an Incognito window with extensions disabled.
+Those messages can be caused by browser extensions injecting markup into <head>.
+
+Do not delete your .env file. Keep it beside package.json.
+
+The ZIP has not been tested with a full production build in this environment;
+confirm npm run build locally after startup works.

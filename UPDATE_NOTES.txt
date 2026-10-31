@@ -1,0 +1,12 @@
+SCIENCE EXPLORER — UPDATE NOTES
+
+Changes made:
+1. Games dashboard now uses two cards per row on tablet/desktop and one per row on mobile.
+2. Removed the heavy gradients, decorative glow/rings and dark card treatment from the Games dashboard cards and AI Game Creator banner. Cards now use a simpler light surface with restrained accent icons.
+3. Added a Back to Dashboard control on the Games hub and single-game pages. Chemistry and Physics world back controls now return to the dashboard; mission Exit actions return to the dashboard.
+4. Sidebar now starts collapsed and remembers the user's expand/collapse choice in local browser storage, so route changes do not reset it.
+5. Added local, per-user AI Tutor chat history (up to 50 conversations) with New Chat and conversation reopening controls. This history is stored in that browser/device, not cloud-synced.
+6. Improved contrast and readability of the offline interactive gameplay panel. Existing offline activity types (molecule building/equation balancing, magnet experiment, planet ordering and cell sorting) remain interactive.
+
+Important verification note:
+A production build could not be completed in this environment because npm install timed out before dependencies were installed. Please run `npm install` and `npm run build` in the `science_explorer_custom` folder on your computer. No existing project .env file was included or modified.
